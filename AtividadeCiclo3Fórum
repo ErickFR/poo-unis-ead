@@ -1,0 +1,27 @@
+import javax.swing.JOptionPane;
+import java.text.DecimalFormat; 
+
+public class AtividadeCiclo3Forum {
+
+    public static void main(String[] args) {
+        float ps, alM, alCM, IMC;
+        String ler;
+        
+        JOptionPane.showMessageDialog(null, "Calculo de indice de massa corporal");
+        
+        ler = JOptionPane.showInputDialog("Informe o peso em KG: ");
+        ps = Float.parseFloat(ler);
+       
+        ler = JOptionPane.showInputDialog("Informe a altura em CM: ");
+        alCM = Float.parseFloat(ler);
+        
+        alM = alCM/100;
+        
+        IMC = ps/(alM*alM);
+        DecimalFormat df = new DecimalFormat("0.00");
+ 
+        JOptionPane.showMessageDialog(null, " Seu IMC esta em: " + df.format(IMC) + "\n\n Tabela:" + "\n <16 = Magreza grave" + "\n 16 a <17 = Magreza moderada" + "\n 17 a <18,5 = Magreza leve" + "\n 18,5 a <25	= Saudavel" + "\n 25 a <30 = Sobrepeso" + "\n 30 a <35 = Obesidade Grau I" + "\n 35 a <40 = Obesidade Grau II (severa)" + "\n >40 = Obesidade Grau III (morbida)" );
+	
+        }
+		
+}
